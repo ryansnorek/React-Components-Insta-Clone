@@ -8,6 +8,9 @@ const LikeSection = props => {
   // 🔥 Make sure the parent of LikeSection is passing the right props!
   const { likePost, numberOfLikes } = props;
 
+  // likePost is now the function passed in from the Post component: () => likePost(post.id)
+  // numberOfLikes is: post.likes which is the same as dummyData[i].likes
+
   return (
     <div>
       <div
