@@ -8,7 +8,7 @@ const Post = props => {
 
   // post is a single post 'p' from Posts mapped from dummy data
   // likePost is the function passed from Posts from App
-  const { post, likePost } = props;
+  const { post, likePost, makeComment } = props;
 
   return (
     <div className='post-border'>
@@ -23,9 +23,11 @@ const Post = props => {
           src={post.imageUrl}
         />
       </div>
-      {/* Is LikeSection getting all the props it needs to work correctly? */}
-      <LikeSection likePost={() => likePost(post.id)} numberOfLikes={post.likes}/>
-      {/* Comments also wants its props! */}
+      <LikeSection 
+          likePost={() => likePost(post.id)} 
+          makeComment={() => makeComment(post.id)}
+          numberOfLikes={post.likes}
+          />
       <Comments comments={post.comments}/>
     </div>
   );

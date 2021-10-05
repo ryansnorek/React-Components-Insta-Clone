@@ -14,7 +14,7 @@ const SearchBar = (props) => {
       <form className="search-form">
         <input
           type="text"
-          placeholder="Search"
+          placeholder="Search Posts"
         />
       </form>
       <div className="social-wrapper">
