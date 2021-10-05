@@ -15,12 +15,11 @@ const Posts = (props) => {
       {/* Map through the posts array returning a Post component at each iteration */}
       {/* Map over the dummy-data passed in through posts prop
           Pass a single post 'p' as a prop and the likePost function to the Post component */}
-      {posts.map(p => <Post 
+      {posts.map(p => (<Post 
                         key={p.id} 
                         post={p} 
                         likePost={likePost} 
-                        makeComment={makeComment}
-                        />)}
+                        makeComment={makeComment}/>)) }
       {/* Check the implementation of Post to see what props it requires! */}
     </div>
   );

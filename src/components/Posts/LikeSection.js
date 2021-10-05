@@ -24,6 +24,9 @@ const LikeSection = props => {
           <FontAwesomeIcon icon={faComment} onClick={makeComment} />
         </div>
       </div>
+      <form className="comment-form">
+          <input type="text" className="input"></input>
+      </form>
       <p className='like-number'>{numberOfLikes} likes</p>
     </div>
   );
